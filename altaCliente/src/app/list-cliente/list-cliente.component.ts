@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-list-cliente',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListClienteComponent implements OnInit{
 
+  @Input() clientes: any[];
 
   nombre ='';
   cif='';
@@ -18,6 +19,7 @@ export class ListClienteComponent implements OnInit{
   ngOnInit(): void {
 
   }
+
 
   guardar() {
     console.log('Nombre:',this.nombre);
