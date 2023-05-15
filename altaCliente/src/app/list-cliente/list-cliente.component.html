@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Listado clientes</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <tr *ngFor="let cliente of clientes">
+          <td>{{cliente.nombre}}</td>
+          <td>{{cliente.cif}}</td>
+          <td>{{cliente.direccion}}</td>
+          <td>{{cliente.grupo}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
