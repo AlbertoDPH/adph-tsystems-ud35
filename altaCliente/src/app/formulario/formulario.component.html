@@ -5,30 +5,30 @@
     <div class="form-group mb-3">
       <label class="col-2" for="nombre">Nombre</label>
       <div class="col-5 d-flex flex-column">
-        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="Nombre y apellido">
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
       </div>
     </div>
 
     <div class="form-group mb-3">
       <label class="col-2" for="cif">CIF</label>
       <div class="col-5">
-        <input type="text" class="form-control" id="cif" name="cif" [(ngModel)]="cif" placeholder="ejemplo@dominio.com">
+        <input type="text" class="form-control" id="cif" name="cif" [(ngModel)]="cif">
       </div>
     </div>
 
     <div class="form-group mb-3">
-      <label class="col-2" for="direccion">Mensaje</label>
+      <label class="col-2" for="direccion">Direccion</label>
       <div class="col-5">
-        <textarea class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion" placeholder="ejemplo@dominio.com"></textarea>
+        <textarea class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion"></textarea>
       </div>
     </div>
     <div class="form-group mb-5">
-      <label class="col-2" for="grupo">2 + 3 = ?</label>
+      <label class="col-2" for="grupo">grupo</label>
       <div class="col-5">
         <select class="form-control" id="grupo" name="grupo" [(ngModel)]="grupo">
           <option selected="selected">sin definir</option>
-          <option value="Administracion">Administración</option>
-          <option value="Administracion">Programación</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
         </select>
       </div>
     </div>

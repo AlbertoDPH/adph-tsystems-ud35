@@ -5,8 +5,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-9">
       <table class="table table-bordered">
+        <th>Nombre</th>
+        <th>CIF</th>
+        <th>Direccion</th>
+        <th>Grupo</th>
         <tr *ngFor="let cliente of clientes">
           <td>{{cliente.nombre}}</td>
           <td>{{cliente.cif}}</td>

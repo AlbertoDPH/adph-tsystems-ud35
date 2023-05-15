@@ -1,30 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ClienteService } from '../cliente.service';
+
 
 @Component({
   selector: 'app-list-cliente',
   templateUrl: './list-cliente.component.html',
-  styleUrls: ['./list-cliente.component.css']
+  styleUrls: ['./list-cliente.component.css'],
 })
-export class ListClienteComponent implements OnInit{
+export class ListClienteComponent implements OnInit {
+  clientes: any[];
 
-  @Input() clientes: any[];
+  constructor(private clienteService: ClienteService) {}
 
-  nombre ='';
-  cif='';
-  direccion='';
-  grupo='';
-
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
-
-  guardar() {
-    console.log('Nombre:',this.nombre);
-    console.log('CIF:',this.cif);
-    console.log('Direccion:',this.direccion);
+  ngOnInit() {
+    this.clientes = this.clienteService.getClientes();
   }
 
 }

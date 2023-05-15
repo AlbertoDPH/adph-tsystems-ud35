@@ -1,12 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
 })
-export class FormularioComponent implements OnInit{
-  title ='formulario';
+export class FormularioComponent implements OnInit {
+  title = 'formulario';
   nombre = '';
   cif = '';
   direccion = '';
@@ -14,14 +15,22 @@ export class FormularioComponent implements OnInit{
 
   @Input() clientes: any[];
 
-  constructor() {}
+  constructor(private clienteService: ClienteService) {}
 
   ngOnInit(): void {}
 
   guardar() {
-    this.clientes.push
-    console.log('Nombre:', this.nombre);
-    console.log('CIF:', this.cif);
-    console.log('Direccion:', this.direccion);
+    const nuevoCliente = {
+      nombre: this.nombre,
+      cif: this.cif,
+      direccion: this.direccion,
+      grupo: this.grupo,
+    };
+    this.clienteService.addCliente(nuevoCliente);
+
+    this.nombre = '';
+    this.cif = '';
+    this.direccion = '';
+    this.grupo = '';
   }
 }
