@@ -1,3 +1,4 @@
+<!-- Contenedor principal -->
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -11,7 +12,9 @@
         <th>CIF</th>
         <th>Direccion</th>
         <th>Grupo</th>
+        <!-- Usamos *ngFor para iterar sobre el array de clientes -->
         <tr *ngFor="let cliente of clientes">
+          <!-- Mostramos los datos de cada cliente -->
           <td>{{cliente.nombre}}</td>
           <td>{{cliente.cif}}</td>
           <td>{{cliente.direccion}}</td>

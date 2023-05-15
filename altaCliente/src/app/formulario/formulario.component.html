@@ -5,6 +5,7 @@
     <div class="form-group mb-3">
       <label class="col-2" for="nombre">Nombre</label>
       <div class="col-5 d-flex flex-column">
+        <!-- Usa ngModel para el enlace bidireccional de datos -->
         <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
       </div>
     </div>
@@ -32,6 +33,7 @@
         </select>
       </div>
     </div>
+        <!-- Al hacer click en el boton, se llama al metodo guardar() del componente -->
     <button class="btn btn-primary" (click)="guardar()">Guardar</button>
   </form>
 </div>
